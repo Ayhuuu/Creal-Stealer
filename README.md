@@ -1,3 +1,8 @@
+<p align="center"> 
+  <kbd>
+<img src="https://cdn.discordapp.com/attachments/864559355768602654/1040289089372557433/8df7a3389893f1d1ce1d4351c4076440.jpg" width="400"></img>
+  </kbd>
+</p>
 <h1> Creal Stealer | In development...</h1> 
 <h2> [!] RUN ON STARTUP COMING SOON! </h2>
 <p> If you need help you can send a message on discord (Ayhu#1337 artonus#1000) or [Telegram](https://t.me/crealdevelopment) </p>
